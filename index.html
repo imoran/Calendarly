@@ -4,26 +4,13 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" type="text/css" href="./src/index.css" />
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgE3CRhbiDO64pitVffFdDYziqFNQJ6Ac&callback=initMap" type="text/javascript">
+    </script>
   </head>
-  <body>
+  <body onload="initMap()">
     <div id="root">
-      <h3>My Google Maps Demo</h3>
       <div id="map"></div>
-      <script>
-        function initMap() {
-          var center = {lat: 37.774929, lng: -122.419416};
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 12,
-            center: center
-          });
-          var marker = new google.maps.Marker({
-            position: center,
-            map: map
-          });
-        }
-      </script>
-      <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgE3CRhbiDO64pitVffFdDYziqFNQJ6Ac&callback=initMap">
       </script>
     </div>
       <script src='./src/index.js'></script>

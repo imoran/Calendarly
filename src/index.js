@@ -35,3 +35,15 @@ const printData = data => {
     card.appendChild(p);
   });
 };
+
+function initMap() {
+  var center = {lat: 37.774929, lng: -122.419416};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 12,
+    center: center
+  });
+  var marker = new google.maps.Marker({
+    position: center,
+    map: map
+  });
+}
