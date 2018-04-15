@@ -1,49 +1,30 @@
-const app = document.getElementById('root');
-
-const container = document.createElement('div');
-container.setAttribute('class', 'container');
-
-app.appendChild(container);
-
-fetch('https://data.sfgov.org/resource/cuks-n6tp.json', {
-  method: 'get',
-}).then(function(response) {
-  if (response.ok) {
-    response.json().then(function(json) {
-      var data = json;
-      printData(data);
-    });
-  }
-}).catch(function(err) {
-  console.log('Network request for products.json failed');
-});
-
-const printData = data => {
-  data.forEach(datum => {
-    const card = document.createElement('div');
-    card.setAttribute('class', 'card');
-
-    const h1 = document.createElement('h1');
-    h1.textContent = datum.category;
-
-    const p = document.createElement('p');
-    p.textContent = datum.pddistrict;
-
-    container.appendChild(card);
-
-    card.appendChild(h1);
-    card.appendChild(p);
+const collectData = () => {
+  let jsonData = [];
+  fetch('https://data.sfgov.org/resource/cuks-n6tp.json?$limit=5', {
+    method: 'get',
+  }).then(function(response) {
+    if (response.ok) {
+      response.json().then(function(json) {
+        let data = json;
+        data.forEach(datum => {
+          jsonData.push(datum);
+        });
+      });
+    }
+  }).catch(function(err) {
+    console.log('Network request failed');
   });
+  return jsonData;
 };
 
 function initMap() {
-  var center = {lat: 37.774929, lng: -122.419416};
-  var map = new google.maps.Map(document.getElementById('map'), {
+  const jsonData = collectData();
+  jsonData.pop();
+  console.log(jsonData[0]);
+  const center = {lat: 37.774929, lng: -122.419416};
+  const map = new google.maps.Map(document.getElementById('map'), {
     zoom: 12,
     center: center
   });
-  var marker = new google.maps.Marker({
-    position: center,
-    map: map
-  });
+  console.log("another jsondata", jsonData);
 }
