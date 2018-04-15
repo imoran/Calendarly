@@ -10,11 +10,11 @@ The data displayed/received were obtained from data.sfgov.org. It is a collectio
 
 In SFCrime, users will be able to:
 
-- [] Use Google Maps to view criminal activity around San Francisco.
-- [] Search any location and view crimes that have happened around that area.
-- [] Users can view based on crime categories, districts, and days of the week.
-- [] Custom markers for each crime type.
-- [] Users will be able to choose "to" and "from" dates to look at that time frame's crime data.
+- [ ] Use Google Maps to view criminal activity around San Francisco.
+- [ ] Search any location and view crimes that have happened around that area.
+- [ ] Users can view based on crime categories, districts, and days of the week.
+- [ ] Custom markers for each crime type.
+- [ ] Users will be able to choose "to" and "from" dates to look at that time frame's crime data.
 
 ## Wireframes
 
@@ -44,27 +44,27 @@ The project will have the following technologies:
 
 ### Day 1:
 
-- [] Render markers on the Google Map from the API data that was received.
-- [] Figure out how to display colored markers instead of the default markers.
+- [ ] Render markers on the Google Map from the API data that was received.
+- [ ] Figure out how to display colored markers instead of the default markers.
 
 ### Day 2:
 
-- [] Figure out a way to filter based on date
-- [] Figure out a way to filter based on crime
-- [] Figure out a way to filter based on two dropdown lists (date range).
+- [ ] Figure out a way to filter based on date
+- [ ] Figure out a way to filter based on crime
+- [ ] Figure out a way to filter based on two dropdown lists (date range).
 
 ### Day 3:
 
-- [] Figure out a way to filter based on district
-- [] Continue figuring out a way to filter based on two dropdown lists (date range).
-- [] Make the app presentable by using CSS
+- [ ] Figure out a way to filter based on district
+- [ ] Continue figuring out a way to filter based on two dropdown lists (date range).
+- [ ] Make the app presentable by using CSS
 
 ### Day 4:
 
-- [] Make the app presentable by using CSS
-- [] Customize the `Google Map` so that its colors can match the theme of my app.
+- [ ] Make the app presentable by using CSS
+- [ ] Customize the `Google Map` so that its colors can match the theme of my app.
 
 ## Bonus features:
 
-- [] Have graphs to indicate a time lapse views of different crimes around the city.
-- [] Have a heatmap display instead of the markers.
+- [ ] Have graphs to indicate a time lapse views of different crimes around the city.
+- [ ] Have a heatmap display instead of the markers.
