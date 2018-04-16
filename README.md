@@ -2,7 +2,7 @@
 
 ## Background and Overview
 
-Calendarly is a single-page JavaScript client-side app that will allow users to make an appointment, complete with the ability to select an appointment date, time and service.
+Calendarly is a single-page JavaScript client-side app that will allow users to make an appointment, complete with the ability to select/cancel/and reschedule an appointment date, time and service.
 
 ## Functionality & MVP
 
@@ -11,6 +11,7 @@ In Calendarly, users will be able to:
 - [ ] Select a service.
 - [ ] Select an appointment date/time
 - [ ] Confirm their selected appointment
+- [ ] Book/cancel/reschedule appointments using the `Google Calendar API`
 
 ## Wireframes
 
@@ -26,6 +27,7 @@ The project will have the following technologies:
 * Vanilla JavaScript
 * Moment.js for time/date manipulation (this is a maybe, just listing it in case!)
 * Webpack to bundle and serve up the various scripts.
+* `Google Calendar API` to sync the created appointments through their Gmail account.
 
 
 ## Implementation timeline
@@ -60,4 +62,4 @@ The project will have the following technologies:
 
 ## Bonus features:
 
-- [ ] Send text/email message to confirm appointment date/time
+- [ ] Send text/email message to confirm appointment date/time using Twilio.
