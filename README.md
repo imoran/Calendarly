@@ -15,7 +15,9 @@ In Calendarly, users will be able to:
 ## Wireframes
 
 
-
+![service](https://github.com/imoran/Calendarly/blob/master/service.png)
+![calendar](https://github.com/imoran/Calendarly/blob/master/calendar.png)
+![confirmation](https://github.com/imoran/Calendarly/blob/master/confirmation.png)
 
 ## Architecture and Technologies
 
