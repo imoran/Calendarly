@@ -5,10 +5,7 @@ const collectData = () => {
   }).then(function(response) {
     if (response.ok) {
       response.json().then(function(json) {
-        let data = json;
-        data.forEach(datum => {
-          jsonData.push(datum);
-        });
+        jsonData.push(json);
       });
     }
   }).catch(function(err) {
@@ -19,12 +16,10 @@ const collectData = () => {
 
 function initMap() {
   const jsonData = collectData();
-  jsonData.pop();
-  console.log(jsonData[0]);
+  console.log("JSONDATA", jsonData[0]);
   const center = {lat: 37.774929, lng: -122.419416};
   const map = new google.maps.Map(document.getElementById('map'), {
     zoom: 12,
     center: center
   });
-  console.log("another jsondata", jsonData);
 }
