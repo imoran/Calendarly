@@ -2,9 +2,13 @@ body {
   background-color: #FCFCFC;
 }
 
+ul {
+  list-style-type: none;
+}
+
 /*  splash  */
 
-.splash-header img {
+.splash img {
   position: relative;
   background-color: #03B5AA;
   transform: skewY(2deg);
@@ -15,7 +19,7 @@ body {
   z-index: -1;
 }
 
-.splash-header h1 {
+.splash h1 {
   color: black;
   font-family: 'Raleway', sans-serif;
   font-size: 30px;
@@ -39,7 +43,6 @@ body {
   font-size: 14px;
   color: white;
   padding: 15px;
-  /* border: 1px solid #00BFB3; */
 }
 
 
@@ -83,6 +86,26 @@ footer {
   position: relative;
   z-index: -1;
   margin-bottom: -190px;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  float: right;
+  margin: 40px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
+  color: black;
+  font-size: 14px;
+}
+
+.nav-bar li:hover {
+  background-color: #049A8F;
+  color: white;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 2px;
 }
 
 /* Select a Service */

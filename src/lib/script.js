@@ -1,7 +1,7 @@
 const root = document.getElementById('root');
 
 const splashHeader = document.createElement("div");
-splashHeader.classList.add('splash-header');
+splashHeader.classList.add('splash');
 
 
 function createHeader() {
@@ -10,10 +10,24 @@ function createHeader() {
   const triangle = document.createElement('div');
   splashText.append('Calendarly');
   triangle.classList.add('triangle');
+  div.append(createNavBar());
   div.append(splashText);
   div.append(triangle);
   splashHeader.appendChild(div);
   return splashHeader;
+}
+
+function createNavBar() {
+  const ul = document.createElement('ul');
+  const list = ['About', 'Features', 'Contact Us'];
+
+  list.forEach(l => {
+    const li = document.createElement('li');
+    li.append(l);
+    ul.appendChild(li);
+  });
+  ul.classList.add('nav-bar');
+  return ul;
 }
 
 function createSplash() {
