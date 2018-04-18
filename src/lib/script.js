@@ -26,7 +26,20 @@ function createNavBar() {
     li.append(l);
     ul.appendChild(li);
   });
+  const img = document.createElement('img');
+  img.setAttribute('src', 'hamburger.png');
+  img.onclick = function() {
+    // let navBar = document.getElementById('top-nav');
+    // if (navBar.className === 'nav-bar') {
+    //   navBar.className += ' responsive';
+    // } else {
+    //   navBar.className = 'nav-bar';
+    // }
+    console.log('hi');
+  };
+  ul.appendChild(img);
   ul.classList.add('nav-bar');
+  ul.setAttribute('id', 'top-nav');
   return ul;
 }
 
@@ -36,8 +49,8 @@ function createSplash() {
   div.classList.add('splash-picture-button');
   const img = document.createElement('img');
   const button = document.createElement('button');
-  button.append('Book Appointment Now');
-  h2.append('Schedule Your Appointments Quicker!');
+  button.append('Book Appointment');
+  h2.append('Schedule Appointments Quicker!');
   img.setAttribute('src', 'https://images.pexels.com/photos/434337/pexels-photo-434337.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
   img.classList.add('splash-picture');
   div.appendChild(img);

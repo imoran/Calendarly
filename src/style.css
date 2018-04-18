@@ -13,7 +13,7 @@ ul {
   background-color: #03B5AA;
   transform: skewY(2deg);
   transform-origin: top left;
-  height: 600px;
+  height: 550px;
   width: 100%;
   object-fit: cover;
   z-index: -1;
@@ -89,8 +89,6 @@ footer {
 }
 
 .nav-bar {
-  display: flex;
-  justify-content: space-around;
   width: 300px;
   float: right;
   margin: 40px;
@@ -98,15 +96,73 @@ footer {
   font-weight: lighter;
   color: black;
   font-size: 14px;
+  overflow: hidden;
 }
 
-.nav-bar li:hover {
-  background-color: #049A8F;
-  color: white;
-  cursor: pointer;
-  padding: 2px;
-  border-radius: 2px;
+.nav-bar li {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  float: right;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
 }
+
+
+
+.nav-bar li:hover {
+  /* background-color: #049A8F; */
+  /* color: white; */
+  cursor: pointer;
+  /* padding: 2px; */
+  /* border-radius: 2px; */
+}
+
+.nav-bar img {
+  float: right;
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  display: none;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-bar li {
+    display: none;
+  }
+  .nav-bar img {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-bar.responsive {
+    position: relative;
+  }
+  .nav-bar.responsive img {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav-bar.responsive li {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .splash-picture-button h2 {
+    font-size: 16px;
+  }
+
+  .nav-bar {
+    width: 29px;
+  }
+}
+
+
 
 /* Select a Service */
 
