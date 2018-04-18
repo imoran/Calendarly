@@ -20,7 +20,6 @@ function createHeader() {
 function createNavBar() {
   const ul = document.createElement('ul');
   const list = ['About', 'Features', 'Contact Us'];
-
   list.forEach(l => {
     const li = document.createElement('li');
     li.append(l);
@@ -28,16 +27,19 @@ function createNavBar() {
   });
   const img = document.createElement('img');
   img.setAttribute('src', 'hamburger.png');
-  img.onclick = function() {
+  const imgWrapper = document.createElement('div');
+  imgWrapper.setAttribute('id', 'img-wrapper');
+  imgWrapper.onclick = function() {
+    // console.log('ayyy');
     // let navBar = document.getElementById('top-nav');
     // if (navBar.className === 'nav-bar') {
     //   navBar.className += ' responsive';
     // } else {
     //   navBar.className = 'nav-bar';
     // }
-    console.log('hi');
   };
-  ul.appendChild(img);
+  imgWrapper.append(img);
+  ul.appendChild(imgWrapper);
   ul.classList.add('nav-bar');
   ul.setAttribute('id', 'top-nav');
   return ul;

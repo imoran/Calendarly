@@ -109,8 +109,6 @@ footer {
   padding: 14px 16px;
 }
 
-
-
 .nav-bar li:hover {
   /* background-color: #049A8F; */
   /* color: white; */
@@ -125,7 +123,14 @@ footer {
   width: 30px;
   background-color: transparent;
   display: none;
-  margin-top: 20px;
+}
+
+#img-wrapper {
+  z-index: 999;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  margin-top: 22px;
 }
 
 @media screen and (max-width: 600px) {
@@ -159,6 +164,10 @@ footer {
 
   .nav-bar {
     width: 29px;
+  }
+
+  .splash h1 {
+    width: 50px;
   }
 }
 
