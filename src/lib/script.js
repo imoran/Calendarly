@@ -31,12 +31,12 @@ function createNavBar() {
   imgWrapper.setAttribute('id', 'img-wrapper');
   imgWrapper.onclick = function() {
     // console.log('ayyy');
-    // let navBar = document.getElementById('top-nav');
-    // if (navBar.className === 'nav-bar') {
-    //   navBar.className += ' responsive';
-    // } else {
-    //   navBar.className = 'nav-bar';
-    // }
+    let navBar = document.getElementById('top-nav');
+    if (navBar.className === 'nav-bar') {
+      navBar.className += ' responsive';
+    } else {
+      navBar.className = 'nav-bar';
+    }
   };
   imgWrapper.append(img);
   ul.appendChild(imgWrapper);
