@@ -16,7 +16,7 @@ const modal = (date) => {
 	parentModal.setAttribute('id', 'myModal');
 	parentModal.setAttribute('class', 'modal');
 	modalClose.setAttribute('class', 'modal-close');
-	modalClose.setAttribute('src', 'image/close.png');
+	modalClose.setAttribute('src', './src/image/close.png');
 	modalCenter.setAttribute('class', 'modal-center');
 	modalContent.setAttribute('class', 'modal-content');
 	modalHeader.setAttribute('class', 'modal-header');
