@@ -1,13 +1,14 @@
 import {calendar} from '../calendar/calendar';
 
 const splash = () => {
-	const splash = document.createElement('div');
+	const Splash = document.createElement('div');
 	const triangle = document.createElement('div');
+	const triangleBottom = document.createElement('div');
 	const h2 = document.createElement('h2');
 	const img = document.createElement('img');
 	const button = document.createElement('button');
-	const bottomTriangle = document.createElement('footer');
-	splash.classList.add('splash-main');
+	Splash.classList.add('splash-main');
+	triangleBottom.classList.add('splash-main-bottom');
 	triangle.classList.add('splash-main-triangle');
 	h2.append('Schedule Appointments Quicker!');
 	img.setAttribute('src', 'https://images.pexels.com/photos/434337/pexels-photo-434337.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
@@ -18,13 +19,13 @@ const splash = () => {
 		}
 		root.appendChild(calendar());
 	};
-	splash.appendChild(triangle);
-	splash.appendChild(img);
-	splash.appendChild(h2);
-	splash.appendChild(button);
-	splash.appendChild(bottomTriangle);
+	Splash.appendChild(triangle);
+	Splash.appendChild(img);
+	Splash.appendChild(h2);
+	Splash.appendChild(button);
+	Splash.appendChild(triangleBottom);
 
-	return splash;
+	return Splash;
 };
 
 

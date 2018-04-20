@@ -52,7 +52,7 @@
 	background-color: #03B5AA;
 	transform: skewY(2deg);
 	transform-origin: top left;
-	height: 530px;
+	height: 730px;
 	width: 100%;
 	object-fit: cover;
 }
@@ -97,43 +97,75 @@
 	margin-bottom: -230px;
 }
 
+
 .description-div {
-	opacity: 0;
-}
-
-.description-div.active {
-	opacity: 1;
-	margin-top: 100px;
-	margin-bottom: 0;
-	margin-left: auto;
-	margin-right: auto;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 900px;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin: 40px 300px;
+	opacity: 0;
+	animation-name: close;
+	animation-duration: 0.8s;
+	animation-timing-function: ease-out;
 }
 
-.description-picture {
-	height: 250px;
+.description-active {
+	opacity: 1;
+	animation-name: open;
+	animation-duration: 0.8s;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes open {
+	from {opacity: 0}
+	to {opacity: 1}
+}
+@keyframes close {
+	from {opacity: 1}
+	to {opacity: 0}
+}
+
+.description-div div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 25px 0;
+}
+
+.description-div caption {
+	margin-top: 20px;
+}
+
+.description-div img {
 	width: 250px;
+	height: 250px;
 	object-fit: cover;
-	-moz-border-radius:50%;
-	-webkit-border-radius:50%;
+	border-radius: 50%;
 	border: 1px solid #ededed;
 }
 
-
-/* footer */
-
-footer {
+.splash-main-bottom {
 	width: 100%;
-	height: 200px;;
+	height: 200px;
 	transform: skewY(-0.1deg);
 	background-color: #03B2A6;
 	position: relative;
 	z-index: -1;
 	margin-top: -160px;
 }
+
+
+
+/* footer */
+
+footer {
+	width: 100%;
+	height: 200px;
+	background-color: #03B2A6;
+}
+
 
 
 
@@ -183,10 +215,13 @@ footer {
 	overflow: auto;
 	background-color: rgb(0,0,0);
 	background-color: rgba(0,0,0,0.4);
-	-webkit-animation-name: zoom;
-	-webkit-animation-duration: 0.8s;
 	animation-name: zoom;
 	animation-duration: 0.8s;
+}
+
+@keyframes zoom {
+	from {opacity: 0}
+	to {opacity: 1}
 }
 
 .modal-center {
@@ -222,11 +257,6 @@ footer {
 	padding: 4px 16px;
 	background-color: #5cb85c;
 	color: white;
-}
-
-@keyframes zoom {
-	from {opacity: 0}
-	to {opacity: 1}
 }
 
 .modal-Time {
@@ -316,6 +346,27 @@ footer {
 		width: 50px;
 	}
 
+}
+
+@media screen and (max-width: 1700px) {
+	.description-div {
+		margin: 40px 250px;
+	}
+}
+@media screen and (max-width: 1400px) {
+	.description-div {
+		margin: 40px 200px;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.description-div {
+		margin: 40px 100px;
+	}
+}
+@media screen and (max-width: 1000px) {
+	.description-div {
+		margin: 40px 0px;
+	}
 }
 
 

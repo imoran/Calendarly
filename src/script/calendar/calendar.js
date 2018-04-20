@@ -38,7 +38,7 @@ const createCell = () => {
 	return tr;
 }
 
-const calendarTabelHeader = () => {
+const calendarTableHeader = () => {
 	let trHeader = document.createElement('tr');
 	let weekArr = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 	for (let i = 0; i < weekArr.length; i++) {
@@ -121,7 +121,7 @@ export const calendar = () => {
 	topHeader.appendChild(month);
 	topHeader.appendChild(nextMonth());
 	container.appendChild(topHeader);
-	table.appendChild(calendarTabelHeader());
+	table.appendChild(calendarTableHeader());
 	for (let j = 0; j < 5; j++) {
 		table.appendChild(createCell());
 	}

@@ -1,6 +1,6 @@
 
-// const footer = () => {
-//   return document.createElement('footer');
-// };
-//
-// export default footer;
+const footer = () => {
+  return document.createElement('footer');
+};
+
+export default footer;
