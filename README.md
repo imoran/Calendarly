@@ -11,7 +11,6 @@ In Calendarly, users will be able to:
 - [ ] Select a service.
 - [ ] Select an appointment date/time
 - [ ] Confirm their selected appointment
-- [ ] Book/cancel/reschedule appointments using the `Google Calendar API`
 
 ## Wireframes
 
@@ -25,9 +24,8 @@ In Calendarly, users will be able to:
 The project will have the following technologies:
 
 * Vanilla JavaScript
-* Moment.js for time/date manipulation (this is a maybe, just listing it in case!)
+* CSS
 * Webpack to bundle and serve up the various scripts.
-* `Google Calendar API` to sync the created appointments through their Gmail account.
 
 
 ## Implementation timeline
@@ -40,24 +38,24 @@ The project will have the following technologies:
 
 ### Day 1:
 
-- [ ] Work on select service page using CSS and Vanilla JavaScript to make it look nice.
-- [ ] Figure out a way to display another web page through pure DOM manipulation.
+- [x] Work on select service page using CSS and Vanilla JavaScript to make it look nice.
+- [x] Figure out a way to display another web page through pure DOM manipulation.
 
 ### Day 2:
 
- - [ ] Work on populating calendar and applying its logic.
- - [ ] Use CSS to style the calendar.
+ - [x] Work on populating calendar and applying its logic.
+ - [x] Use CSS to style the calendar.
 
 ### Day 3:
 
-- [ ] Work on populating calendar and applying its logic.
-- [ ] Work on displaying available times when date is selected (using modal).
-- [ ] Make the app presentable by using CSS
+- [x] Work on populating calendar and applying its logic.
+- [x] Work on displaying available times when date is selected (using modal).
+- [x] Make the app presentable by using CSS
 
 ### Day 4:
 
-- [ ] Work on populating calendar and applying its logic.
-- [ ] Make the app presentable by using CSS
+- [x] Work on populating calendar and applying its logic.
+- [x] Make the app presentable by using CSS
 - [ ] Work on Bonus
 
 ## Bonus features:
