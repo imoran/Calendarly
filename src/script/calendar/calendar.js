@@ -76,7 +76,7 @@ const nextMonth = () => {
 		while (root.firstChild) {
 			root.removeChild(root.firstChild);
 		}
-		root.appendChild(createCalendar());
+		root.appendChild(calendar());
 	};
 	return next;
 };
@@ -105,7 +105,7 @@ const previousMonth = () => {
 		while (root.firstChild) {
 			root.removeChild(root.firstChild);
 		}
-		root.appendChild(createCalendar());
+		root.appendChild(calendar());
 	};
 	return previous;
 };
