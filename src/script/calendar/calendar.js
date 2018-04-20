@@ -1,4 +1,7 @@
 import modal from './modal';
+import header from '../homepage/header';
+import footer from '../homepage/footer';
+
 
 const monthNames = ["January", "February", "March", "April", "May", "June",
 	"July", "August", "September", "October", "November", "December"];
@@ -16,7 +19,7 @@ const createCell = () => {
 		newDate.setDate(daysCounter);
 		let newWeekDay = newDate.getDay();
 		let td = document.createElement('td');
-		td.style.background = 'lightgray';
+		td.style.background = '#EEE';
 		if ( newWeekDay === i && daysCounter <= daysInMonth) {
 			let text = document.createTextNode(newDate.getDate());
 			td.appendChild(text);
@@ -29,14 +32,14 @@ const createCell = () => {
 						myModal.remove();
 					}
 					root.appendChild(modal(date));
-				}
+				};
 			}
 			daysCounter++;
 		}
 		tr.appendChild(td);
 	}
 	return tr;
-}
+};
 
 const calendarTableHeader = () => {
 	let trHeader = document.createElement('tr');
@@ -48,10 +51,10 @@ const calendarTableHeader = () => {
 		trHeader.appendChild(th);
 	}
 	return trHeader;
-}
+};
 
 const nextMonth = () => {
-	const next = document.createElement('h2');
+	const next = document.createElement('p');
 	const text = document.createTextNode("Next Month");
 	next.appendChild(text);
 	next.onclick = () => {
@@ -64,7 +67,7 @@ const nextMonth = () => {
 			daysInMonth = new Date(currentYear, (currentMonth + 1), 0).getDate();
 			currentDate = new Date(`${currentYear} ${currentMonth + 1} ${daysInMonth} 23:59`);
 		} else {
-			currentDate = temp
+			currentDate = temp;
 		}
 		currentYear = currentDate.getFullYear();
 		currentMonth = currentDate.getMonth();
@@ -73,13 +76,13 @@ const nextMonth = () => {
 		while (root.firstChild) {
 			root.removeChild(root.firstChild);
 		}
-		root.appendChild(calendar());
+		root.appendChild(createCalendar());
 	};
 	return next;
-}
+};
 
 const previousMonth = () => {
-	const previous = document.createElement('h2');
+	const previous = document.createElement('p');
 	const text = document.createTextNode("Previous Month");
 	previous.appendChild(text);
 	previous.onclick = () => {
@@ -93,7 +96,7 @@ const previousMonth = () => {
 			daysInMonth = new Date(currentYear, (currentMonth + 1), 0).getDate();
 			currentDate = new Date(`${currentYear} ${currentMonth + 1} ${daysInMonth} 23:59`);
 		} else {
-			currentDate = temp
+			currentDate = temp;
 		}
 		currentYear = currentDate.getFullYear();
 		currentMonth = currentDate.getMonth();
@@ -102,29 +105,38 @@ const previousMonth = () => {
 		while (root.firstChild) {
 			root.removeChild(root.firstChild);
 		}
-		root.appendChild(calendar());
+		root.appendChild(createCalendar());
 	};
 	return previous;
-}
+};
 
-export const calendar = () => {
-	const container = document.createElement('div');
+const createCalendar = () => {
+	const parentDiv = document.createElement('div');
 	const topHeader = document.createElement('div');
 	const month = document.createElement('h1');
 	const table = document.createElement('table');
 	const monthYear = `${monthNames[currentMonth]} ${currentYear}`;
 	table.setAttribute('id', 'calendar-table');
-	container.setAttribute('id', 'calendar-container');
+	parentDiv.setAttribute('id', 'calendar-container');
 	topHeader.setAttribute('id', 'calendar-top-header');
 	topHeader.appendChild(previousMonth());
 	month.append(monthYear);
 	topHeader.appendChild(month);
 	topHeader.appendChild(nextMonth());
-	container.appendChild(topHeader);
+	parentDiv.appendChild(topHeader);
 	table.appendChild(calendarTableHeader());
 	for (let j = 0; j < 5; j++) {
 		table.appendChild(createCell());
 	}
-	container.appendChild(table);
-	return container;
-}
+	parentDiv.appendChild(table);
+	return parentDiv;
+};
+
+export const calendar = () => {
+	const parentDiv = document.createElement('div');
+	parentDiv.appendChild(header());
+	parentDiv.appendChild(createCalendar());
+	parentDiv.appendChild(footer());
+
+	return parentDiv;
+};

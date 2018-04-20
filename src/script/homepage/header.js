@@ -15,11 +15,11 @@ const navBar = () => {
 	});
 
 	imgWrapper.onclick = function() {
-		let navBar = document.getElementById('top-nav');
-		if (navBar.className === 'nav-bar') {
-			navBar.className += ' responsive';
+		let navbar = document.getElementById('top-nav');
+		if (navbar.className === 'nav-bar') {
+			navbar.className += ' responsive';
 		} else {
-			navBar.className = 'nav-bar';
+			navbar.className = 'nav-bar';
 		}
 	};
 

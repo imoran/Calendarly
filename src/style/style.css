@@ -62,7 +62,6 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
 	border-radius: 5px;
 	cursor: pointer;
 	background-color: #037971;
@@ -77,7 +76,6 @@
 	top: 40%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
 	text-align: center;
 	color: black;
 	font-weight: lighter;
@@ -172,35 +170,45 @@ footer {
 /* calendar */
 
 #calendar-container {
+	margin: 0 auto;
+	margin-bottom: 70px;
 	width: 1100px;
-	margin: 20px auto;
 }
 
 #calendar-top-header {
-	margin: 0 auto;
+	margin: 5px auto;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	/* font-weight: lighter; */
+	font-size: 17px;
+}
+
+#calendar-top-header p:hover {
+	cursor: pointer;
 }
 
 #calendar-table {
 	width: 100%;
-	/* margin: 0 auto; */
 }
 
-#calendar-table th td {
-	border: 1px solid black;
-	border-collapse: collapse;
+
+#calendar-table th, td {
+	border-radius: 5px;
 }
+
 #calendar-table th {
-	border: 1px solid black;
 	border-collapse: collapse;
-	padding: 5px 60px;;
+	padding: 5px 60px;
+	color: white;
+	background-color: #03B2A6;
+	font-weight: lighter;
 }
+
 #calendar-table td {
-	border: 1px solid black;
 	border-collapse: collapse;
-	padding: 50px 50px;;
+	padding: 10px 100px 100px 10px;
+	font-weight: lighter;
 }
 
 
@@ -236,6 +244,7 @@ footer {
 	width: 600px;
 	height: 200px;
 	background-color: #fefefe;
+	border-radius: 5px;
 }
 
 .modal-close {
@@ -254,8 +263,8 @@ footer {
 }
 
 .modal-header {
-	padding: 4px 16px;
-	background-color: #5cb85c;
+	padding: 10px 16px;
+	background-color: #00BFB3;
 	color: white;
 }
 
@@ -268,7 +277,10 @@ footer {
 .modal-Time li {
 	font-size: 20px;
 	padding: 5px;
-	margin: 5px;
+	margin: 1px;
+	width: 100px;
+	font-weight: lighter;
+	text-align: center;
 }
 
 .modal-Time li:hover {
@@ -276,6 +288,46 @@ footer {
 	border-radius: 5px;
 }
 
+#modal-Time-color {
+	background-color: lightgray;
+}
+
+.modal-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.modal-body p {
+	font-size: 20px;
+	text-align: center;
+	padding: 10px;
+	font-weight: lighter;
+}
+
+.modal-body select {
+	font-size: 20px;
+	line-height: 17px;
+	width: 200px;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+.modal-body button {
+	border-radius: 4px;
+	padding: 10px;
+	font-size: 20px;
+	line-height: 17px;
+	cursor: pointer;
+	margin: 10px auto;
+	width: 200px;
+	background-color: #037971;
+	color: white;
+}
+
+.modal-body button:hover {
+	background-color: #00BFB3;
+}
 
 
 /* @media */
