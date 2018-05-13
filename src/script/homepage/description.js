@@ -1,8 +1,8 @@
 
 
 const description = () => {
-  const LINKS = ['https://cdn.pixabay.com/photo/2018/02/23/09/39/accounting-3175108_1280.jpg',
-  'https://cdn.pixabay.com/photo/2017/07/31/18/41/calendar-2559888_1280.jpg',
+  const LINKS = ['pic1.jpg',
+  'pic2.jpg',
   'https://images.pexels.com/photos/908284/pexels-photo-908284.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'];
   const CAPTION = ["Quick easy and convenient",
                    "Request appointments for services",
