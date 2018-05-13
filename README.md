@@ -4,6 +4,8 @@ Calendarly is an app that allows users to create appointments.
 
 It uses Vanilla JavaScript to structure and design the app, while the CSS does the styling.
 
+Check out the app [here](https://pedantic-sinoussi-33f057.netlify.com/)
+
 ![splash](https://github.com/imoran/Calendarly/blob/master/splash.png)
 
 The Splash page is responsive and renders the pictures through animations.
