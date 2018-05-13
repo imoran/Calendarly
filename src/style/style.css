@@ -1,6 +1,12 @@
 
 /* splash header */
 
+a {
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+}
+
 .splash-header {
 	display: flex;
 	flex-direction: row;
